@@ -58,7 +58,8 @@ dates: true
 ```
 ````
 
-Becomes
+Becomes:
+
 ![New Year Example](https://imgur.com/MbKACK2.png)
 
 
