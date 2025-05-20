@@ -9,7 +9,6 @@ export default class ChronoBarsPlugin extends Plugin {
 
 	renderChronoBar(container: HTMLElement, source: string) {
 		const params = this.parseParameters(source);
-		console.log('Parsed parameters:', params);
 		
 		// Create wrapper element to replace the code block
 		const wrapper = createDiv({ cls: 'chrono-bar-container' });
