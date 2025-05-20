@@ -32,8 +32,8 @@
 }
 
 .chrono-bar-text {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: var(--text-muted);
-    margin-top: 5px;
+    margin: 5px;
     text-align: center;
 }
