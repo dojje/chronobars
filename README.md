@@ -19,7 +19,7 @@ Time Progress bars for Obsidian
 
 ## Usage
 
-Create a code block with the `chrono-bar` language:
+Create a code block with the `chrono-bar` settings:
 
 ````markdown
 ```chrono-bar
@@ -51,17 +51,21 @@ dates: true
 
 ````markdown
 ```chrono-bar
-start: 2023-12-31 20:00
-end: 2024-01-01 00:30
+start: 2025-01-01 00:00
+end: 2026-01-01 00:00
 name: New Year Countdown
 dates: true
 ```
 ````
 
+Becomes
+![New Year Example](https://imgur.com/MbKACK2.png)
+
+
 ## Styling
 
 You can customize the appearance by adding these CSS snippets to your vault:
-
+```
 .chrono-bar-container {
   /\* Container styles */
 }
@@ -79,3 +83,18 @@ You can customize the appearance by adding these CSS snippets to your vault:
 .chrono-bar-text {
   /\* Text styles */
 }
+```
+
+## Development
+
+Want to contribute? Here's how to set up the development environment:
+
+1. Clone this repository
+
+2. `npm install`
+
+3. `npm run dev` to start compilation in watch mode
+
+Support
+Found a bug or have a feature request? [Please open an issue](https://github.com/dojje/chronobars/issues).
+
