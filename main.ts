@@ -34,14 +34,13 @@ export default class ChronoBarsPlugin extends Plugin {
 
 		// Build the chrono bar components
 		const bar = wrapper.createDiv({ cls: 'chrono-bar' });
-		const fill = bar.createDiv({ cls: 'chrono-bar-fill' });
-		fill.style.width = `${progress * 100}%`;
+		const fill = bar.createDiv({cls: 'chrono-bar-fill' });
+		fill.setAttribute('style', `--progress: ${progress * 100}%`); // CSS variable
 
 		if (params.percentage != 'false') {
 			const text = wrapper.createDiv({ cls: 'chrono-bar-text' });
 			text.setText(`${Math.round(progress * 100)}%${params.dates == "true" ? ` (${params.start} → ${params.end})` : ""}`);
 		}
-		// Replace the original code block with our custom component
 		container.replaceWith(wrapper);
 	}
 

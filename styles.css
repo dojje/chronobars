@@ -29,6 +29,7 @@
     background-color: var(--interactive-accent);
     transition: width 0.3s ease;
     margin-right: auto;
+    width: var(--progress);
 }
 
 .chrono-bar-text {
