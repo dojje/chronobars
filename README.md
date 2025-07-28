@@ -2,7 +2,7 @@
 
 Time Progress bars for Obsidian
 
-![ChronoBars Example](https://imgur.com/aE24YyR.png)
+![ChronoBars Example](https://i.imgur.com/lupM7n6.png)
 
 ## Features
 
