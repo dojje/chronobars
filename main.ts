@@ -35,7 +35,7 @@ export default class ChronoBarsPlugin extends Plugin {
 		// Build the chrono bar components
 		const bar = wrapper.createDiv({ cls: 'chrono-bar' });
 		const fill = bar.createDiv({cls: 'chrono-bar-fill' });
-		fill.setAttribute('style', `--progress: ${progress * 100}%`); // CSS variable
+		fill.setCssProps({ '--progress': `${progress * 100}%` });
 
 		if (params.percentage != 'false') {
 			const text = wrapper.createDiv({ cls: 'chrono-bar-text' });
