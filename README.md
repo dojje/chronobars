@@ -12,7 +12,7 @@ Time Progress bars for Obsidian
 
 ## Installation
 
-1. Available soon via the Obsidian Community Plugins tab
+1. Available via the Obsidian Community Plugins tab: search for "Chronobars"
 2. Or install manually:
    - Download the latest release
    - Extract to your vault's plugins folder: `.obsidian/plugins/chrono-bars`
@@ -33,19 +33,38 @@ dates: true
 
 ### Supported Parameters
 
-| Parameter    | Description                          | Default       | Examples               |
-|--------------|--------------------------------------|---------------|------------------------|
-| `start`      | Start time (required)                | -             | `09:00`, `2023-12-31 23:30` |
-| `end`        | End time (required)                  | -             | `17:00`, `2024-01-01 02:00` |
-| `name`       | Custom title for the bar             | None          | `name: Workday`        |
-| `percentage` | Show/hide percentage                 | `true`        | `percentage: false`    |
-| `dates`      | Show/hide date/time labels           | `false`       | `dates: true`          |
+| Parameter             | Description                                                        | Default       | Examples               |
+|-----------------------|--------------------------------------------------------------------|---------------|------------------------|
+| `start`               | Start time (required)                                              | -             | `09:00`, `2023-12-31 23:30` |
+| `end`                 | End time (required)                                                | -             | `17:00`, `2024-01-01 02:00` |
+| `name`                | Custom title for the bar                                           | None          | `name: Workday`        |
+| `percentage`          | Show/hide percentage                                               | `true`        | `percentage: false`    |
+| `dates`               | Show/hide date/time labels                                         | `false`       | `dates: true`          |
+| `remainingTimeFormat` | Show remaining time, letters pick units: y M d h m s (M is months) | off           | `d h m s`, `y M d h m s` |
+| `remaining`           | Shorthand for remaining time with default `d h m s`                | `false`       | `remaining: true`      |
+| `remainingPosition`   | `below` shows under percent, `replace` hides percent               | `below`       | `remainingPosition: replace` |
+| `remainingLabel`      | Optional prefix before remaining time                              | None          | `remainingLabel: Left` |
 
 ### Time Format Examples
 
 - Simple time: `14:30`
 - Full datetime: `2023-12-31 23:30`
 - Overnight range: `23:30` to `03:00` (automatically handles midnight crossing)
+
+### Remaining time format
+
+Set `remainingTimeFormat` to pick which units to show. Use `y` years, `M` months, `d` days, `h` hours, `m` minutes, `s` seconds. Only listed units are shown, leading zeros are hidden, and the smallest unit is always kept. When `s` is included the line updates every second, otherwise every 30 seconds. Past events show `Ended`.
+
+````markdown
+```chrono-bar
+start: 2025-01-01 00:00
+end: 2026-01-01 00:00
+name: New Year Countdown
+remainingTimeFormat: d h m s
+```
+````
+
+Use `remainingPosition: replace` to hide the percentage and show only remaining time.
 
 ## Examples
 
